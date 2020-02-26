@@ -10,7 +10,7 @@ const routes: Routes = [
     component: InvitadoComponent,
     children: [
       { path: '', component: LandingInvitadoComponent },
-      { path: 'nosotros', component: NosotrosInvitadoComponent}
+      { path: 'nosotros', component: NosotrosInvitadoComponent }
     ]
   }
 ];

@@ -10,6 +10,10 @@ const routes: Routes = [
     // loadChildren: './modulos/invitado/invitado.module#InvitadoModule',
     loadChildren: () => import('./modulos/invitado/invitado.module').then(m => m.InvitadoModule)
   },
+  {
+    path: 'auth',
+    loadChildren: () => import('./modulos/auth/auth.module').then(m => m.AuthModule)
+  },
   { path: 'home', component: HomeComponent },
   { path: '**', component: NotFoundComponent },
 ];
