@@ -1,3 +1,4 @@
+import { HomeComponent } from './components/home/home.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NotFoundComponent } from './components/not-found/not-found.component';
@@ -9,7 +10,7 @@ const routes: Routes = [
     // loadChildren: './modulos/invitado/invitado.module#InvitadoModule',
     loadChildren: () => import('./modulos/invitado/invitado.module').then(m => m.InvitadoModule)
   },
-  // { path: 'path', component: FeatureComponent },
+  { path: 'home', component: HomeComponent },
   { path: '**', component: NotFoundComponent },
 ];
 
