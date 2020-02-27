@@ -1,13 +1,35 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>AngularProject</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!-- Bootstrap Tema -->
+  <link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap.min.css">
+  <!-- !Bootstrap Tema -->
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <!-- !Custom Styles -->
+  <!-- Theme color -->
+  <link rel="stylesheet" href="./assets/css/colors/default-dark.css">
+  <!-- !Theme color -->
 </head>
-<body>
+
+<body class="fix-header card-no-border fix-sidebar">
+  <!-- ============================================================== -->
+  <!-- Preloader - style you can find in spinners.css -->
+  <!-- ============================================================== -->
+  <div class="preloader">
+    <div class="loader">
+      <div class="loader__figure"></div>
+      <p class="loader__label">Admin Pro</p>
+    </div>
+  </div>
   <app-root></app-root>
+  
 </body>
+
 </html>
