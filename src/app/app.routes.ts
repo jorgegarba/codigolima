@@ -11,6 +11,10 @@ const routes: Routes = [
     loadChildren: () => import('./modulos/invitado/invitado.module').then(m => m.InvitadoModule)
   },
   {
+    path: 'admin',
+    loadChildren: () => import('./modulos/admin/admin.module').then(m => m.AdminModule)
+  },
+  {
     path: 'auth',
     loadChildren: () => import('./modulos/auth/auth.module').then(m => m.AuthModule)
   },
