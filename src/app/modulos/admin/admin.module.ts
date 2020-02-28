@@ -3,13 +3,17 @@ import { CommonModule } from '@angular/common';
 import { AdminComponent } from './admin.component';
 import { ProductosComponent } from './components/productos/productos.component';
 import { AdminRoutingModule } from './admin.routes';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 
 
 @NgModule({
   declarations: [
     AdminComponent,
-    ProductosComponent
+    ProductosComponent,
+    NavbarComponent,
+    SidebarComponent
   ],
   imports: [
     CommonModule,
