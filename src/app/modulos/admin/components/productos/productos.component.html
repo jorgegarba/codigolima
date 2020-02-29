@@ -37,6 +37,26 @@
         <div class="card">
           <div class="card-body">
             Aquí mostraremos la lista de productos.
+            <table>
+              <thead>
+                <tr>
+                  <th>id</th>
+                  <th>nombre</th>
+                  <th>codigo</th>
+                  <th>imagen</th>
+                  <th>descripcion</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let p of productos">
+                  <td>{{p.id}}</td>
+                  <td>{{p.nombre}}</td>
+                  <td>{{p.codigo}}</td>
+                  <td>{{p.imagen}}</td>
+                  <td>{{p.descripcion}}</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>

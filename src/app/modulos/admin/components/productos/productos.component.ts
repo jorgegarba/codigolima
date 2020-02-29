@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductoService } from '../../services/producto.service';
 
 @Component({
   selector: 'app-productos',
@@ -7,9 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductosComponent implements OnInit {
 
-  constructor() { }
+  productos = [];
 
+  constructor(public _sProducto: ProductoService) { }
+
+  /**
+   * Funcion del ciclo de vida de toooodos los componentes en
+   * Angular
+   * Investigar: Ciclo de vida de los componentes en Angular
+   */
   ngOnInit(): void {
+    this._sProducto.getProductos()
+      .then((peticion) => {
+        return peticion.json();
+      }).then((prods) => {
+        console.log(prods);
+        this.productos = prods;
+      });
   }
 
 }
