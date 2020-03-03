@@ -9,6 +9,7 @@ import { ProductoService } from '../../services/producto.service';
 export class ProductosComponent implements OnInit {
 
   productos = [];
+  cargando = true;
 
   constructor(public _sProducto: ProductoService) { }
 
@@ -24,6 +25,7 @@ export class ProductosComponent implements OnInit {
       }).then((prods) => {
         console.log(prods);
         this.productos = prods;
+        this.cargando = false;
       });
   }
 

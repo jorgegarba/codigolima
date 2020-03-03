@@ -36,8 +36,16 @@
       <div class="col-12">
         <div class="card">
           <div class="card-body">
-            Aquí mostraremos la lista de productos.
-            <table>
+
+            <div class="alert alert-info text-center" role="alert" *ngIf="cargando===true">
+              <h2 class="alert-heading">Cargando</h2>
+              <p>
+                <i class="fa fa-refresh fa-3x fa-spin" aria-hidden="true"></i>
+              </p>
+              <p class="mb-0">Estamos conectándonos con la base de datos</p>
+            </div>
+
+            <table *ngIf="cargando===false" class="table">
               <thead>
                 <tr>
                   <th>id</th>
@@ -52,7 +60,9 @@
                   <td>{{p.id}}</td>
                   <td>{{p.nombre}}</td>
                   <td>{{p.codigo}}</td>
-                  <td>{{p.imagen}}</td>
+                  <td>
+                    <img src="{{p.imagen}}" alt="" width="100">
+                  </td>
                   <td>{{p.descripcion}}</td>
                 </tr>
               </tbody>

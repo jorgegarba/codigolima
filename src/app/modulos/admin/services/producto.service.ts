@@ -13,5 +13,4 @@ export class ProductoService {
     // verbo HTTP es GET, que no hay 'headers' ni 'body'
     return fetch(url);
   }
-
 }
